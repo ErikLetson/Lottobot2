@@ -13,6 +13,39 @@ class Lottobot():
 
         self.steem = steem.Steem()
 
-    def mainloop(self):
+        self.on = True
+
+        self.entrants = []
+
+        #timers
+        self.entry_timer = 0
+        self.passes = 0
+
+    def check_for_entries(self):
 
         pass
+
+    def declare_winner(self):
+
+        pass
+
+    def mainloop(self):
+
+        while self.on:
+
+            if self.entry_timer == 10:
+
+                self.entry_time = 0
+                self.check_for_entries(self)
+
+                self.passes += 1
+
+            else:
+
+                self.entry_timer += 1
+
+            #end
+            if self.passes == 100:
+
+                self.passes = 0
+                self.declare_winner()
