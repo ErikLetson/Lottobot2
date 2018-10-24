@@ -16,6 +16,7 @@ class Lottobot():
         self.on = True
 
         self.entrants = []
+        self.winner = None
 
         #timers
         self.entry_timer = 0
