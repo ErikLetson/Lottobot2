@@ -27,7 +27,15 @@ class Lottobot():
 
     def declare_winner(self):
 
-        pass
+        if len(self.entrants) > 0:
+
+            x = random.randint(0, len(self.entrants))
+
+            self.winner = self.entrants[x]
+
+        else:
+
+            pass
 
     def mainloop(self):
 
